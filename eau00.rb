@@ -1,9 +1,9 @@
 #!/usr/bin/env ruby
 
 # Displays all the different possible combinations
-# of three numbers in ascending order. The repetition is voluntary.
+# of three numbers in ascending order, in ascending order (the repetition is voluntary).
 # Language: Ruby
-# Exec Command in Shell: ruby water00.rb
+# Exec Command in Shell: ruby eau00.rb
 
 
 # Define an empty array to store the valid combinations
@@ -32,5 +32,3 @@ result = combinations.map { |c| c.join('') }.join(', ')
 
 # Print the result
 puts result
-
-
