@@ -11,12 +11,12 @@
 
 ##### Steps:
 
-    Loop through all numbers from 0 to 98 for the first number.
-    Loop through all numbers from the next number to 99 for the second number.
-    Format the combination of two numbers as a string.
-    Add the formatted string to a results array.
-    Join the results array into a single string with comma-separated values.
-    Print the results string.
+1.  Loop through all numbers from 0 to 98 for the first number.
+2.  Loop through all numbers from the next number to 99 for the second number.
+3.  Format the combination of two numbers as a string.
+4.  Add the formatted string to a results array.
+5.  Join the results array into a single string with comma-separated values.
+6.  Print the results string.
 
 ##### Pseudo-code:
 

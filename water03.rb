@@ -36,10 +36,12 @@ def fibo(n)
 end
 
 # Get the command line argument and call 'fibo' function
-if ARGV.length != 1
-  puts "Error: incorrect number of arguments provided"
+arg = ARGV
+
+if arg.length != 1 || !arg[0].match?(/\A-?\d+\z/)
+  puts "Error: incorrect input format provided"
 else
-  n = ARGV[0].to_i
+  n = arg[0].to_i
   # puts n
   puts fibo(n)
   # puts @cache

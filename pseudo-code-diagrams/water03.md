@@ -76,7 +76,7 @@ v     v     v
 1. Initialize cache array.
 2. Define a 'fibo' function that takes an integer argument 'n'<br>
    and returns the 'nth Fibonacci' number.
-3. Check if the input argument is a non-negative integer.<br>
+3. Check if the input argument is a non-negative integer or a string.<br>
    If it's not, print an error message and exit the program.
 4. Use cache if available to return the result.<br>
    Ex. of cache content :<br>
@@ -96,7 +96,7 @@ Start
  |
  |__ Define 'fibo' function
  |      |
- |      Check if input is a non-negative integer
+ |      Check if input is a non-negative integer or a string
  |      |   |
  |      |   |__ If not, print an error message & exit
  |      |
@@ -130,9 +130,9 @@ End
 +------------------------+
         |       |
         |       V
-        |    +--------------------------------------+
-        |    | Check if input is a non-negative int |
-        |    +--------------------------------------+
+        |    +--------------------------------------------------+
+        |    | Check if input is a non-negative int or a string |
+        |    +--------------------------------------------------+
         |       |       |
         |       |       V
         |       |    +---------------------------------------+
@@ -187,8 +187,8 @@ BEGIN
         cache[n] = fibo(n-1) + fibo(n-2)
     END FUNCTION
 
-    IF ARGV.length != 1 THEN
-        PRINT "Error: incorrect number of arguments provided"
+    IF ARGV.length != 1 || !ARGV[0].match?(/\A-?\d+\z/) THEN
+        PRINT "Error: incorrect input format provided"
     ELSE
         n = ARGV[0].to_i
         PRINT fibo(n)
@@ -209,3 +209,18 @@ Big O <em>(worst case complexity algo)</em> :
 Omega (Ω-notation <em>best case complexity algo)</em> :
 
   - Omega notation for this code is also <b>Ω(n)</b>
+
+
+### 8. Regex :
+
+The regular expression ```/\A-?\d+\z/``` is a pattern that matches an input string that contains only an integer number. The regular expression is made up of the following components:
+
+    \A:  Matches the start of the input string.
+
+    -?:  Matches an optional minus sign,
+         which allows the integer to be negative.
+
+    \d+: Matches one or more digits.
+         This is the actual integer value.
+
+    \z:  Matches the end of the input string.
