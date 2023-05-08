@@ -12,6 +12,14 @@
 
 🟢 03. "water03.rb".
 
-🟠 04. "water04.rb".
+🟢 04. "water04.rb".
 
-🟤 05. "water05.rb".
+🟠 05. "water05.rb".
+
+🟤 03. "water06.rb".
+
+🟤 04. "water07.rb".
+
+🟤 05. "water08.rb".
+
+etc...
