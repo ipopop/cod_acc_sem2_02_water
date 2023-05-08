@@ -1,3 +1,14 @@
+# Create a program that displays the first prime number
+# greater than the number given as an argument.
+#
+# Display -1 if the parameter is negative or bad.
+#
+# Example of use:
+#
+# $> ruby exo.rb 14
+# 17
+# 
+
 def is_prime?(n, cache)
   return true if cache.include?(n)
   return false if n <= 1
