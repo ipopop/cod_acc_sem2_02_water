@@ -33,6 +33,53 @@ $>
 
 The algorithm to find the first prime number greater than a given number is to start from the given number, increment it until a prime number is found.
 
+We defines a function **'is_prime'** that checks if a given number **'n'** is prime or not. It also uses a **'cache'** to store previously checked prime numbers for faster lookup. Here's a step-by-step explanation of the code:
+
+1. The function takes two arguments: **'n'** (the number to check for primality) and **'cache'** (an array to store previously checked prime numbers) :
+
+```
+def is_prime?(n, cache)
+```
+
+2. Check if **'n'** is already in the **'cache'**. If it is, return true, as it has been previously determined to be prime :
+
+```
+return true if cache.include?(n)
+```
+
+3. If **'n'** is less than or equal to 1, return false, as it is not a prime number :
+
+```
+return false if n <= 1
+```
+
+4. Iterate through the range of numbers from 2 to the square root of **'n'**. The square root is used because any factor of **'n'** larger than its square root will have a corresponding factor smaller than the square root. This optimizes the search for factors :
+
+```
+(2..Math.sqrt(n)).each do |i|
+```
+
+If **'n'** is divisible by **'i'** *(i.e., n % i == 0)*, then **'n'** is not a prime number, so return false :
+
+```
+return false if n % i == 0
+```
+
+After the loop has finished without finding any factors, add **'n'** to the **'cache'**, as it is now determined to be a prime number :
+
+```
+cache << n
+```
+
+Finally, return true, as **'n'** is a prime number.
+
+```
+  true
+end
+```
+
+In summary, the **'is_prime'**? function checks if a given number **'n'** is prime by iterating through possible factors up to the square root of **'n'**. It also uses a **'cache'** to store previously checked prime numbers for faster performance.
+
 ### 4. Steps :
 
 1.  Define an 'is_prime?' function that takes an integer argument 'n' and a cache.
