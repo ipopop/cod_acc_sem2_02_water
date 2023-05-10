@@ -1,4 +1,4 @@
-### To-do list
+### [Coding Accelerator Challenge](https://joincodingnow.com/coding-accelerator)
 
 ## Test : Water
 (S02 M04)
@@ -16,9 +16,9 @@
 
 🟢 05. "water05.rb".
 
-🟠 06. "water06.rb".
+🟢 06. "water06.rb".
 
-🟤 07. "water07.rb".
+🟠 07. "water07.rb".
 
 🟤 08. "water08.rb".
 
