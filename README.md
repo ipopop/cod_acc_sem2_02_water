@@ -18,9 +18,9 @@
 
 🟢 06. "water06.rb".
 
-🟠 07. "water07.rb".
+🟢 07. "water07.rb".
 
-🟤 08. "water08.rb".
+🟠 08. "water08.rb".
 
 🟤 09. "water09.rb".
 
