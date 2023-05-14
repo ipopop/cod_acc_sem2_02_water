@@ -20,13 +20,15 @@ def find_element_index(array, element)
   return -1
 end
 
-if ARGV.length < 2
+arg = ARGV
+
+if arg.length < 2
   puts "Error: Not enough arguments provided"
   exit
 end
 
-array = ARGV[0, ARGV.length - 1]
-element = ARGV[ARGV.length - 1]
+array = arg[0, arg.length - 1]
+element = arg[arg.length - 1]
 
 index = find_element_index(array, element)
 
