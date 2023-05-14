@@ -42,11 +42,13 @@ $>
 
 ### 3. Algo :
 
-1. Define a display_values function that takes two integer arguments, min and max, and prints the values between them in ascending order.
-2. Define a manual_sort function that takes two integer arguments, a and b, and returns a sorted array.
-3. Check if the input arguments are valid integers. If not, print "error" and exit the program.
-4. Call the manual_sort function with the input arguments to get the sorted values and assign them to min and max.
-5. Call the display_values function with the sorted min and max values.
+The algorithm takes two integer arguments, num1 and num2, and first validates if they are both integers.
+
+If not, it prints an error message and terminates the program.
+
+After validation, it ensures that num1 is less than or equal to num2 by swapping their values if necessary.
+
+Finally, the algorithm iterates through the range from num1 (inclusive) to num2 (exclusive) and prints each number, followed by a newline.
 
 
 ### 4. Steps :
