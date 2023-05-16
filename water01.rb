@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 # display all the different combinations
 # of two numbers between 00 and 99
 # in ascending order.

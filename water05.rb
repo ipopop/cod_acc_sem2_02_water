@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 # Create a program that determines
 # if a string is inside another string.
 #

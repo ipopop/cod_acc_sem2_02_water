@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 def capitalize_every_other_letter(string)
   return '' unless string.is_a?(String)
 

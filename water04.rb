@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 # Create a program that displays the first prime number
 # greater than the number given as an argument.
 #

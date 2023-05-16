@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 # Create a program that displays the Nth element of the famous Fibonacci sequence.
 # (0, 1, 1, 2) being the beginning of the sequence and the first element being at index 0.
 # Display -1 if the parameter is negative or bad.

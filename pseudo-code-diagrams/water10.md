@@ -21,7 +21,7 @@ $> ruby exo.rb This is the world that contains Charlie a nice man Charlie
 6
 ```
 ```
-$> ruby exo.rb test test
+$> ruby exo.rb test test test
 0
 ```
 ```

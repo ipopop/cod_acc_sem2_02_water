@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 # Display the received arguments in reverse.
 #
 # Display "Error" & exit the program
