@@ -27,7 +27,6 @@ def generate_combinations
       end
     end
   end
-  
   # Return the combinations
   combinations
 end
