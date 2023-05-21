@@ -9,15 +9,15 @@
 # Examples of use:
 
 # ```
-# $> ruby exo.py 20 25
+# $> ruby exo.rb 20 25
 # 20 21 22 23 24
 # ```
 # ```
-# $> ruby exo.py 25 20
+# $> ruby exo.rb 25 20
 # 20 21 22 23 24
 # ```
 # ```
-# $> ruby exo.py hello
+# $> ruby exo.rb hello
 # error
 # ```
 
