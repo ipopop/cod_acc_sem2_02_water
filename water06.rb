@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 def custom_ord(char)
-  char.unpack("U")[0]
+  char.unpack("U")[0] #convert the character to an array containing its Unicode code point
 end
 
 def custom_upcase(char)
