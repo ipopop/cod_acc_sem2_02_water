@@ -14,20 +14,20 @@ Ruby Programming Language
 Examples:
 
 ```
-"$> ruby exo.py" "Am" "I" "Funny"
+"$> ruby exo.rb" "Am" "I" "Funny"
 Funny
 I
 Am
 ```
 
 ```
-"$> ruby exo.py" ha ho
+"$> ruby exo.rb" ha ho
 ho
 ha
 ```
 
 ```
-"$> ruby exo.py" "Hello 36"
+"$> ruby exo.rb" "Hello 36"
 Hello 36
 ```
 
