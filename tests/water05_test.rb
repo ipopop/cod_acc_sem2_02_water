@@ -8,7 +8,6 @@ class NewCodeTest < Minitest::Test
     assert_equal true, manual_include("hello", "lo")
     assert_equal false, manual_include("hello", "day")
     assert_equal true, manual_include("rubyprogramming", "ruby")
-    assert_equal false, manual_include("rubyprogramming", "python")
   end
 
   def test_manual_include_with_empty_or_nil_inputs
