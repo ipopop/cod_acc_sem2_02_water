@@ -28,11 +28,11 @@ ruby script.rb <string>
 - Examples of use:
 
 ```
-$> python exo.py "Hello world!"
+$> ruby exo.rb "Hello world!"
 HeLlO wOrLd !
 ```
 ```
-$> python exo.py 42
+$> ruby exo.rb 42
 error
 ```
 
