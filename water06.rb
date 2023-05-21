@@ -1,8 +1,12 @@
 #!/usr/bin/env ruby
 
+def custom_ord(char)
+  char.unpack("U")[0]
+end
+
 def custom_upcase(char)
   if char >= 'a' && char <= 'z'
-    return (char.ord - 32).chr
+    return (custom_ord(char) - 32).chr
   else
     return char
   end
@@ -10,7 +14,7 @@ end
 
 def custom_downcase(char)
   if char >= 'A' && char <= 'Z'
-    return (char.ord + 32).chr
+    return (custom_ord(char) + 32).chr
   else
     return char
   end
