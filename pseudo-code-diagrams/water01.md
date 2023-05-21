@@ -24,7 +24,7 @@ Exec Command in Shell: ```ruby script.rb```
 Examples:
 
 ```
-"$> ruby exo.py" "Hello 36"
+"$> ruby exo.rb" "Hello 36"
 Hello 36
 ```
 
