@@ -15,15 +15,15 @@
 Examples of use:
 
 ```
-$> python exo.py "4445353"
+$> ruby exo.rb "4445353"
 true
 ```
 ```
-$> python exo.py 42
+$> ruby exo.rb 42
 true
 ```
 ```
-$> python exo.py "Hello 36"
+$> ruby exo.rb "Hello 36"
 false
 ```
 
