@@ -4,13 +4,13 @@
 # if a string is inside another string.
 #
 # Examples of use:
-# $> ruby exo.py hello day
+# $> ruby exo.rb hello day
 # true
 #
-# $> ruby exo.py hello day
+# $> ruby exo.rb hello day
 # false
 #
-# $> ruby exo.py 42
+# $> ruby exo.rb 42
 # error
 #
 # display error and exit the program
