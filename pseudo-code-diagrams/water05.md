@@ -14,23 +14,23 @@ Language: Ruby
 Exec Command in Shell:
 
 ```
-ruby exo.py <string1> <string2>
+ruby exo.rb <string1> <string2>
 ```
 
 Examples of use:
 
 ```
-$> ruby exo.py hello day
+$> ruby exo.rb hello day
 true
 ```
 
 ```
-$> ruby exo.py hello day
+$> ruby exo.rb hello day
 false
 ```
 
 ```
-$> ruby exo.py 42
+$> ruby exo.rb 42
 error
 ```
 
