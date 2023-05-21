@@ -1,5 +1,21 @@
 #!/usr/bin/env ruby
 
+def custom_upcase(char)
+  if char >= 'a' && char <= 'z'
+    return (char.ord - 32).chr
+  else
+    return char
+  end
+end
+
+def custom_downcase(char)
+  if char >= 'A' && char <= 'Z'
+    return (char.ord + 32).chr
+  else
+    return char
+  end
+end
+
 def capitalize_every_other_letter(string)
   return '' unless string.is_a?(String)
 
@@ -8,9 +24,9 @@ def capitalize_every_other_letter(string)
   string.each_char do |char|
     if /[a-zA-Z]/.match(char)
       if capitalize_next
-        result += char.upcase
+        result += custom_upcase(char)
       else
-        result += char.downcase
+        result += custom_downcase(char)
       end
       capitalize_next = !capitalize_next
     else
