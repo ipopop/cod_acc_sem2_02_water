@@ -85,10 +85,10 @@ End
 
 ```
 BEGIN
-    FUNCTION is_numeric?(str)
-        SET decimal_point_encountered to false
+    FUNCTION is_numeric?(str : STRING) : BOOL
+        SET decimal_point_encountered : BOOL to false
 
-        FOR each character char and its index in str DO
+        FOR each character char : CHAR and its index : INT in str DO
             IF index is 0 AND char is '-'
                 CONTINUE to the next iteration
             ELSE IF char is '.' OR char is ',' AND decimal_point_encountered is false
@@ -103,14 +103,14 @@ BEGIN
         RETURN true
     END FUNCTION
 
-    SET arg to the value of ARGV
+    SET arg : ARRAY<STRING> to the value of ARGV
 
     IF the length of arg is not 1
         PRINT "Error: Please provide exactly one argument."
         EXIT with error code 1
     END IF
 
-    SET input_str to the first element in arg converted to a string
+    SET input_str : STRING to the first element in arg converted to a string
 
     PRINT the result of calling is_numeric? with input_str
 END
