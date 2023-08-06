@@ -116,7 +116,7 @@ End
 ```
 BEGIN
     IF ARGV.length > 0
-        PRINT ARGV.reverse
+        PRINT ARGV.reverse : ARRAY<STRING>
     ELSE
         PRINT "Error"
         EXIT
