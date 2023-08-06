@@ -214,14 +214,14 @@ End
 
 ```
 BEGIN
-    FUNCTION is_prime?(n, cache)
+    FUNCTION is_prime?(n : INT, cache : ARRAY<INT>) : BOOL
         IF cache.include?(n)
             RETURN true
         END IF
         IF n <= 1
             RETURN false
         END IF
-        FOR i FROM 2 to Math.sqrt(n)
+        FOR i : INT FROM 2 to Math.sqrt(n)
             IF n % i == 0
                 RETURN false
             END IF
@@ -233,9 +233,9 @@ BEGIN
     IF ARGV.length != 1 || !ARGV[0].match?(/\A-?\d+\z/)
         PRINT "Error: incorrect input format provided"
     ELSE
-        n = ARGV[0].to_i
-        result = n + 1
-        cache = [2, 3, 5, 7]
+        n : INT = ARGV[0].to_i
+        result : INT = n + 1
+        cache : ARRAY<INT> = [2, 3, 5, 7]
         WHILE NOT is_prime?(result, cache)
             result += 1
         END WHILE
