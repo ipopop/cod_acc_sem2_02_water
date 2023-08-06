@@ -90,7 +90,7 @@ BEGIN
     int_args: ARRAY<INT> = args.map(&:to_i)
 
     # Call the function with the command-line arguments
-    absolute_minimum_difference(*args)
+    absolute_minimum_difference(int_args)
 END
 ```
 
