@@ -52,13 +52,13 @@ The algorithm used to capitalize every other letter in a string is very simple. 
 
 ```
 BEGIN
-    FUNCTION capitalize_every_other_letter(input)
+    FUNCTION capitalize_every_other_letter(input : STRING) : STRING
         IF input.match?(/\A\d+\z/) THEN
             RETURN "error"
         END IF
 
-        modified_string = ""
-        input.each_char do |char|
+        modified_string : STRING = ""
+        input.each_char do |char : CHAR|
             if /[a-zA-Z]/.match(char)
                 modified_string << (char == char.upcase ? char.downcase : char.upcase)
             else
