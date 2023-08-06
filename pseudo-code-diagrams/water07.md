@@ -61,12 +61,12 @@ The algorithm takes an input string and processes each character, capitalizing t
 
 ```
 BEGIN
-    FUNCTION capitalize_words(input)
-        chars = input.chars
-        word_start = true
-        result = []
+    FUNCTION capitalize_words(input : STRING) : STRING
+        chars : ARRAY<CHAR> = input.chars
+        word_start : BOOL = true
+        result : ARRAY<CHAR> = []
 
-        FOR EACH char in chars
+        FOR EACH char : CHAR in chars
             IF char is a letter
                 result << (word_start ? char.upcase : char.downcase)
                 word_start = false
@@ -82,7 +82,7 @@ BEGIN
     IF ARGV.empty? || ARGV[0].to_s.to_i.to_s == ARGV[0].to_s THEN
         PRINT "error"
     ELSE
-        input = ARGV[0].to_s
+        input : STRING = ARGV[0].to_s
         PRINT capitalize_words(input)
     END IF
 END
