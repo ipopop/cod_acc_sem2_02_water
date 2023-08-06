@@ -123,16 +123,19 @@ End
 
 ```
 BEGIN
-    combinations = []  // Initialize an empty array for storing valid combinations
+    // Initialize an empty array for storing valid combinations
+    combinations : ARRAY<STRING> = []
 
-    FOR i = 0 to 98
-        FOR j = i+1 to 99
-            combination = format("%02d %02d", i, j) // Format the combination as a string
+    FOR i : INT = 0 to 98
+        FOR j : INT = i+1 to 99
+            // Format the combination as a string
+            combination : STRING = format("%02d %02d", i, j) 
             combinations << combination // Add the combination to the array
         END FOR
     END FOR
 
-    result = combinations.join(", ") // Join the combinations array into a single string with comma-separated values
+    // Join the combinations array into a single string with comma-separated values
+    result : STRING = combinations.join(", ")
     PRINT result // Print the result
 END
 
