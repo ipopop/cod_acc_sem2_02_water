@@ -63,17 +63,17 @@ To calculate the absolute minimum difference between two elements of an array, t
 
 ```
 BEGIN
-    FUNCTION absolute_minimum_difference(array)
+    FUNCTION absolute_minimum_difference(array : ARRAY<INT>)
         IF LENGTH(array) < 2 THEN
             PRINT "Error: Array must have at least two elements"
             EXIT
         END IF
 
-        min_diff = ABS(array[0] - array[1])
+        min_diff : INT = ABS(array[0] - array[1])
 
-        FOR i FROM 0 TO LENGTH(array) - 1
-            FOR j FROM i + 1 TO LENGTH(array) - 1
-                diff = ABS(array[i] - array[j])
+        FOR i : INT FROM 0 TO LENGTH(array) - 1
+            FOR j : INT FROM i + 1 TO LENGTH(array) - 1
+                diff : INT = ABS(array[i] - array[j])
                 IF diff < min_diff THEN
                     min_diff = diff
                 END IF
@@ -84,7 +84,10 @@ BEGIN
     END FUNCTION
 
     # Get the command-line arguments excluding the script name
-    args = ARGV.map(&:to_i)
+    args: ARRAY<STRING> = ARGV
+
+    # Convert arguments to integers
+    int_args: ARRAY<INT> = args.map(&:to_i)
 
     # Call the function with the command-line arguments
     absolute_minimum_difference(*args)
