@@ -98,16 +98,16 @@ End
 
 ```
 BEGIN
-    FUNCTION manual_include(str1, str2)
+    FUNCTION manual_include(str1 : STRING, str2: STRING) : BOOL
         RETURN false IF str1.nil? OR str2.nil? OR str1.empty? OR str2.empty?
 
-        str1_chars = str1.chars
-        str2_chars = str2.chars
-        str2_len = str2_chars.length
+        str1_chars : ARRAY<CHAR> = str1.chars
+        str2_chars : ARRAY<CHAR> = str2.chars
+        str2_len : INT = str2_chars.length
 
         FOR EACH char, index IN str1_chars
             IF char == str2_chars[0] AND (index + str2_len - 1) < str1_chars.length
-                slice = str1_chars[index, str2_len]
+                slice : ARRAY<CHAR> = str1_chars[index, str2_len]
                 RETURN true IF slice == str2_chars
             END IF
         END FOR
@@ -122,7 +122,7 @@ BEGIN
 
     str1, str2 = ARGV
 
-    result = manual_include(str1, str2)
+    result : BOOL = manual_include(str1, str2)
 
     PRINT result
 END
