@@ -85,13 +85,13 @@ End
 
 ```
 BEGIN
-    FUNCTION display_values(min, max)
-        FOR n in range(min, max) DO
+    FUNCTION display_values(min : INT, max : INT)
+        FOR n : INT in range(min, max) DO
             PRINT n
         END FOR
     END FUNCTION
 
-    FUNCTION manual_sort(a, b)
+    FUNCTION manual_sort(a : INT, b : INT) : ARRAY<INT>
         IF a < b THEN
             RETURN [a, b]
         ELSE
