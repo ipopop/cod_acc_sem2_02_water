@@ -172,8 +172,8 @@ End
 
 ```
 BEGIN
-    FUNCTION fibo(n)
-        cache = {}  // Initialize cache inside the function
+    FUNCTION fibo(n : INT) : INT
+        cache MAP<INT, INT> = {}  // Initialize cache inside the function
 
         IF n < 0 THEN
             RETURN -1
@@ -190,7 +190,7 @@ BEGIN
     IF ARGV.length != 1 || !ARGV[0].match?(/\A-?\d+\z/) THEN
         PRINT "Error: incorrect input format provided"
     ELSE
-        n = ARGV[0].to_i
+        n : INT = ARGV[0].to_i
         PRINT fibo(n)
     END IF
 END
