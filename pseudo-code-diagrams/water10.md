@@ -33,8 +33,8 @@ $> ruby exo.rb test boom
 ### Pseudo-code
 ```
 BEGIN
-    FUNCTION find_element_index(array, element)
-        FOR i FROM 0 TO LENGTH(array) - 1
+    FUNCTION find_element_index(array : ARRAY, element)
+        FOR i : INT FROM 0 TO LENGTH(array) - 1
             IF array[i] == element
                 RETURN i
             END IF
@@ -50,7 +50,7 @@ BEGIN
     array = ARGV[0, ARGV.length - 1]
     element = ARGV[ARGV.length - 1]
 
-    index = find_element_index(array, element)
+    index : INT = find_element_index(array, element)
 
     PRINT index
 END
