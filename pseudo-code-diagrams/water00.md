@@ -33,10 +33,10 @@ $
 
 ```
 BEGIN
-    SET combinations = empty array
-    FOR i in 0 to 9 DO
-        FOR j in i to 9 DO
-            FOR k in j to 9 DO
+    SET combinations : ARRAY<ARRAY<INT>> = empty array
+    FOR i : INT in 0 to 9 DO
+        FOR j : INT in i to 9 DO
+            FOR k : INT in j to 9 DO
                 IF i != j AND i != k AND j != k THEN
                     IF [i, j, k] not in combinations THEN
                         ADD [i, j, k] to combinations
@@ -45,7 +45,7 @@ BEGIN
             END FOR
         END FOR
     END FOR
-    SET result = format combinations as a string
+    SET result : STRING = format combinations as a string
     PRINT result
 END
 
